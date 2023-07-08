@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;800&family=Rubik+Moonrocks&display=swap");
+
+:root {
+  --animate-speed: 0.8s;
+}
+
+/* Universal Display setting*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+  overflow: hidden;
+  color: #000;
+}
+
+/* Display Configurations */
+.play-mode {
+  display: flex;
+}
+.select-player {
+  display: none;
+}
+.game-room {
+  display: none;
+}
+.result-box {
+  display: none;
+}
+.container,
+.play-mode,
+.select-player,
+.game-room {
+  height: 100vh;
+}
+.play-mode,
+.select-player,
+.game-room,
+.result-box,
+.container,
+.mode-instruction,
+.play-mode-options,
+.settings-box,
+.btn,
+.playersdorm,
+.players,
+.playericon,
+.playersdetails,
+.game-area,
+section,
+section > span,
+.scores,
+.notifier {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 50px;
+  flex-direction: column;
+}
+.container,
+.mode-instruction,
+.play-mode-options,
+.settings-box,
+.btn,
+.playersdorm,
+.gameicon,
+.players,
+.playericon,
+.playersdetails,
+.game-area,
+.scores,
+.notifier,
+.settings,
+section,
+section > span {
+  display: flex;
+}
+.players,
+.playersdetails,
+.gameicon,
+.scores,
+section {
+  flex-direction: row;
+}
+/* Play Mode remove border  */
+.mode-instruction,
+.play-mode-options {
+  border: none;
+}
+
+/* Display Background */
+.play-mode,
+.select-player,
+.game-room,
+.result-box {
+  background-color: #f7f7f7;
+}
+/* start-page-text-effects */
+.gameicon {
+  margin-top: 50px;
+  text-align: center;
+}
+h1 {
+  font-weight: 900;
+  font-size: 7rem;
+  color: #286ef4;
+}
+.iconO,
+.O-select {
+  color: chocolate;
+}
+.mode-instruction {
+  margin-top: -20px;
+  gap: 50px;
+}
+.mode-instruction > .title,
+label,
+.notifier > h1,
+section > span {
+  font-size: 2rem;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.msg {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.close {
+  color: #fff;
+}
+
+.title {
+  font-weight: 800;
+  color: #286ef4;
+}
+/* Transistion and Keyframes */
+.iconX {
+  transform: translateX(1800px);
+  animation: heading var(--animate-speed) forwards ease-in 0.1s;
+  font-family: "Rubik Moonrocks", cursive;
+}
+.iconO {
+  transform: translateX(-1800px);
+  animation: heading var(--animate-speed) forwards ease-in 0.2s;
+  font-family: "Rubik Moonrocks", cursive;
+}
+@keyframes heading {
+  to {
+    transform: translateX(0);
+  }
+}
+/* buttons styles and effects */
+.mode-instruction > .play-mode-options {
+  padding: 2%;
+  gap: 5px;
+}
+button,
+.close,
+section > span,
+input {
+  cursor: pointer;
+}
+.modes,
+.continue-btn,
+.scores {
+  border-radius: 25px;
+  width: 50%;
+  height: 40px;
+  background-color: #fff;
+}
+.cpu {
+  background-color: #286ef4;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.friends {
+  background-color: #fdfdfd;
+  color: #000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.setting {
+  width: 200px;
+  height: 50px;
+  font-size: 40px;
+  border: 1px solid #286ef4;
+  outline: auto;
+  border-radius: 25px;
+  text-align: center;
+  color: #286ef4;
+  background-color: white;
+}
+
+.setting:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #286ef4;
+}
+
+.setting-btn {
+  width: 300px;
+  height: 50px;
+  font-size: 40px;
+  font-weight: 800;
+  border: 1px solid #286ef4;
+  outline: auto;
+  border-radius: 25px;
+  text-align: center;
+  color: #286ef4;
+  background-color: white;
+}
+/* continue btn */
+#continue-game {
+  border: 1px solid #286ef4;
+  color: #286ef4;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+/* Select player page */
+.playericon {
+  gap: 1px;
+  font-family: "Rubik Moonrocks", cursive;
+}
+.continue-btn {
+  color: #000;
+}
+/* play-room */
+
+.playersdetails,
+.game-area,
+section {
+  gap: 0;
+}
+.playersdetails {
+  width: 95%;
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+}
+.playersdetails > span {
+  text-align: center;
+  width: 32%;
+}
+.scores {
+  background-color: chocolate;
+  text-align: center;
+  gap: 2px;
+}
+.game-area {
+  border: 5px solid #f7f9f8;
+  width: 95%;
+  padding: 2%;
+  border-radius: 25px;
+}
+section {
+  width: 100%;
+}
+
+section > span {
+  border: 1px solid #efeef1;
+  border-left: none;
+  width: 35%;
+  height: 120px;
+  text-align: center;
+}
+.a > span {
+  border-top: none;
+}
+.b {
+  border-right: none;
+}
+.c > span {
+  border-bottom: none;
+}
+.modes {
+  margin-bottom: 10px;
+}
+.result-box {
+  background-color: #286ef4;
+  height: 15%;
+  position: absolute;
+  transform: translate(-0%, -0%) scale(0.98);
+  transition: all 0.5s ease;
+  gap: 0;
+  padding: 5px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.notifier {
+  gap: 5px;
+  height: 100%;
+  background-color: #286ef4;
+}
+.close {
+  position: relative;
+  top: -8%;
+  left: 40%;
+  font-size: 30px;
+}
+.notifier > span > p {
+  font-size: 50px;
+}
+.notifier > span {
+  border: none;
+  background-color: transparent;
+}
+.notifier > h1 {
+  color: #fff;
+  transform: translateX(1800px);
+  animation: heading var(--animate-speed) forwards ease-in 0.15s;
+  margin-top: -15px;
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+.notifier > span {
+  transform: translateX(-1800px);
+  animation: heading var(--animate-speed) forwards ease-in 0.15s;
+}
+/*New-game  */
+#Restart {
+  width: 300px;
+  height: 80px;
+}
+
+@keyframes heading {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 650px) {
+  button#cpu-mode {
+    border: none;
+  }
+  button#friend-mode {
+    border: none;
+  }
+}
+.game-area {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media screen and (min-width: 650px) {
+  .play-mode,
+  .select-player,
+  .game-room,
+  .result-box,
+  .container,
+  .mode-instruction,
+  .play-mode-options,
+  .settings-box {
+    width: 100%;
+    gap: 10px;
+  }
+  .mode-instruction {
+    margin-top: 0;
+  }
+  .modes,
+  .continue-btn {
+    width: 25%;
+  }
+  .players {
+    width: 45%;
+  }
+  .playersdetails,
+  .game-area {
+    width: 45%;
+  }
+  .game-area;
+}
+@media screen and (max-height: 550px) {
+  .play-mode,
+  .select-player,
+  .game-room,
+  .result-box,
+  .container,
+  .mode-instruction,
+  .play-mode-options,
+  .settings-box {
+    width: 100%;
+    gap: 5%;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  .mode-instruction > .title,
+  .title {
+    font-size: 15px;
+  }
+  .modes {
+    margin-bottom: 0px;
+  }
+  .playersdorm {
+    gap: 10px;
+  }
+  .game-room {
+    gap: 1;
+  }
+  section > span {
+    height: 60px;
+  }
+  .playersdetails > span,
+  .notifier > span > p,
+  .notifier > h1 {
+    font-size: 20px;
+  }
+
+  .notifier > .close {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .notifier {
+    gap: 0;
+  }
+}
+
+.circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 15px solid #f2823f;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: "Rubik Moonrocks", cursive;
+}
+
+.cross {
+  height: 90px;
+  width: 80px;
+  position: relative;
+  transform: rotate(51deg);
+  font-family: "Rubik Moonrocks", cursive;
+}
+
+.cross::after,
+.cross::before {
+  content: "";
+  position: absolute;
+  background-color: #286ef4;
+  font-family: "Rubik Moonrocks", cursive;
+}
+
+.cross::before {
+  left: 50%;
+  width: 30%;
+  margin-left: -19.3%;
+  height: 100%;
+}
+
+.cross::after {
+  top: 55%;
+  height: 30%;
+  margin-top: -20%;
+  width: 100%;
+  margin-left: -60%;
+}
