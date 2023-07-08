@@ -115,7 +115,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   playAgainstComputerBtn.addEventListener("click", handlePlayModeSelection);
   playAgainstFriendBtn.addEventListener("click", handlePlayModeSelection);
-  restartBtn.addEventListener("click", startGame);
+  // restartBtn.addEventListener("click", startGame);
+  restartBtn.addEventListener("click", function () {
+    // console.log("Restart Game");
+    // setInterval("location.reload()", 100);
+    setTimeout(function () {
+      window.location.reload();
+    }, 1000);
+  });
   closeBtn.addEventListener("click", () => {
     resultBox.style.display = "none";
   });
