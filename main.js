@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     [2, 4, 6], // Diagonals
   ];
 
+  //selecting all our needed DOM Elements
   const boxes = document.querySelectorAll(".game-area span");
   const playAgainstComputerBtn = document.getElementById("cpu-mode");
   const playAgainstFriendBtn = document.getElementById("friend-mode");
